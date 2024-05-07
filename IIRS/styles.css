@@ -1,0 +1,33 @@
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 5px;
+    visibility: hidden; /* Initially hidden with CSS */
+    opacity: 0; /* Initially transparent with CSS */
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out; /* Animation for showing popup */
+  }
+  
+  #popup.show { /* Style for showing the popup (toggled by JS) */
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #popup-image {
+    width: 200px; /* Adjust width as needed */
+    animation: image-appear 0.5s ease-in-out; /* Animation for image appearance */
+  }
+  
+  @keyframes image-appear { /* Image animation definition */
+    from {
+      opacity: 0;
+      transform: scale(0.8); /* Scale up from 80% size */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1); /* Scale to full size */
+    }
+  }
